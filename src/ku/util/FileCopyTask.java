@@ -175,14 +175,6 @@ public class FileCopyTask implements Runnable {
 			public String toString() {
 				return "Copy file one line of text at a times.";			}
 		};
-		FileCopyTask task6 = new FileCopyTask(inputFilename, fileout) {
-			public void run() {
-				FileUtil.charCopy(in, out, SIXTYFOURKILOBYTE);
-			}
-			public String toString() {
-				return "Copy file with 64KB char at a times.";
-			}
-		};
 
 		TaskTimer timer = new TaskTimer();
 		timer.measureAndPrint(task1);  // wasn't that easy?
@@ -190,7 +182,6 @@ public class FileCopyTask implements Runnable {
 		timer.measureAndPrint(task3);
 		timer.measureAndPrint(task4);
 		timer.measureAndPrint(task5);
-		timer.measureAndPrint(task6);
 
 	}
 }
